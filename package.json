@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Backend for https://github.com/Polly2000/todo-list",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start:dev": "nodemon index.js"
   },
@@ -18,7 +17,6 @@
   },
   "homepage": "https://github.com/Polly2000/todo-list-backend#readme",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-validator": "^6.14.2",
     "mongoose": "^6.8.4",
