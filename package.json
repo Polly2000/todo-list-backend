@@ -1,6 +1,7 @@
 {
   "name": "todo-list-backend",
   "version": "1.0.0",
+  "proxy": "http://localhost:5000",
   "description": "Backend for https://github.com/Polly2000/todo-list",
   "main": "index.js",
   "scripts": {
@@ -17,8 +18,10 @@
   },
   "homepage": "https://github.com/Polly2000/todo-list-backend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-validator": "^6.14.2",
+    "express-validation": "^4.1.0",
     "mongoose": "^6.8.4",
     "nodemon": "^2.0.20"
   }
