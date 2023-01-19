@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { registration } = require('./controllers/AuthController');
+const { registration, login } = require('./controllers/AuthController');
 const { getColors, createColor } = require('./controllers/ColorController');
 const { getTasks, createTask } = require('./controllers/TaskController');
 const { getLists, createList } = require('./controllers/ListController');
@@ -8,6 +8,7 @@ const router = Router();
 
 // auth
 router.post('/registration', registration);
+router.post('/login', login);
 
 // colors
 router.get('/colors', getColors);

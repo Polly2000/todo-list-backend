@@ -10,13 +10,13 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  password: {
+  hashedPassword: {
     type: String,
     required: true
   },
   todos: [{
     type: mongoose.Types.ObjectId,
-    ref: 'Todo'
+    ref: 'Task'
   }]
 })
 
