@@ -14,10 +14,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  // todos: [{
-  //   type: mongoose.Types.ObjectId,
-  //   ref: 'Todo'
-  // }]
+  todos: [{
+    type: mongoose.Types.ObjectId,
+    ref: 'Todo'
+  }]
 })
 
 module.exports = mongoose.model('User', userSchema);
