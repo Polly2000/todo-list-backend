@@ -1,15 +1,25 @@
 const { Router } = require('express');
-const { getTodo, saveTodo } = require('./controllers/TodoController');
 const { registration } = require('./controllers/AuthController');
-const { getColors, createColor } = require('./controllers/ColorsController');
+const { getColors, createColor } = require('./controllers/ColorController');
+const { getTasks, createTask } = require('./controllers/TaskController');
+const { getLists, createList } = require('./controllers/ListController');
 
 const router = Router();
 
-router.get('/', getTodo);
-router.get('/colors', getColors);
-router.post('/createcolor', createColor)
-router.post('/save', saveTodo);
+// auth
 router.post('/registration', registration);
 
+// colors
+router.get('/colors', getColors);
+router.post('/createcolor', createColor)
+
+// lists
+router.get('/lists', getLists);
+router.post('/createlist', createList);
+
+// tasks
+router.get('/tasks', getTasks);
+router.post('/createtask', createTask);
 
 module.exports = router;
+
