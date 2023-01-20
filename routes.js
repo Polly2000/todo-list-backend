@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { registration, login } = require('./controllers/AuthController');
 const { getColors, createColor } = require('./controllers/ColorController');
 const { getTasks, createTask } = require('./controllers/TaskController');
-const { getLists, createList } = require('./controllers/ListController');
+const { getLists, getList, createList } = require('./controllers/ListController');
 
 const router = Router();
 
@@ -16,6 +16,7 @@ router.post('/createcolor', createColor)
 
 // lists
 router.get('/lists', getLists);
+router.get('/lists/:id', getList);
 router.post('/createlist', createList);
 
 // tasks

@@ -7,6 +7,20 @@ module.exports.getLists = async (req, res) => {
   } catch(err) {
     console.log(err)
     return res.status(500).json({
+      message: 'Не удалось получить списки'
+    })
+  }
+}
+
+module.exports.getList = async (req, res) => {
+  try {
+    const listId = req.params.id;
+    // console.log(listId);
+    const list = await ListModel.findOne({ _id: listId });
+    res.json(list);
+  } catch(err) {
+    console.log(err)
+    return res.status(500).json({
       message: 'Не удалось получить список'
     })
   }
